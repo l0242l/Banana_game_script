@@ -4,6 +4,7 @@ if these imports are red install them by typing
 " pip install (the thing that is red)" 
 into the terminal 
 
+to stop this code press "ctrl + c" in the terminal to stop
 """
 
 from AppOpener import open, close
@@ -22,7 +23,6 @@ app = "banana"
 
 def MouseShit():
     pos = mouse.position
-    print(pos,"\n")
     root = tk.Tk()
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
@@ -30,7 +30,6 @@ def MouseShit():
     goal_y = screen_height / 2
     x = goal_x - pos[0]
     y = goal_y - pos[1]
-    print(x,y)
     mouse.move(x, y)
     time.sleep(10)
     mouse.press(Button.left)
@@ -68,6 +67,7 @@ while True:
     find_and_click_banana()
     close(app)
     time.sleep(7200)
+    # this is prob never going to work
     if keyboard.is_pressed("="):
         break
 print("broke out of loop. code has stopped")
