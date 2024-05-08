@@ -22,7 +22,7 @@ app = "banana"
 time.sleep(2)
 
 open(app)
-print("hello world")
+time.sleep(5)
 def MouseShit():
     pos = mouse.position
     print(pos,"\n")
@@ -39,9 +39,6 @@ def MouseShit():
     mouse.press(Button.left)
     mouse.release(Button.left)
     time.sleep(.1)
-
-MouseShit()
-close(app)
 
 def find_and_click_banana():
     # Load banana image
@@ -69,3 +66,8 @@ def find_and_click_banana():
         # Simulate mouse click
         pyautogui.click(x=center_x, y=center_y)
         print("Clicked on banana!")
+        break
+
+find_and_click_banana()
+#MouseShit()
+close(app)
