@@ -55,13 +55,20 @@ def find_and_click_banana():
         break
 
 while True:
+    for i in range(5):
+        time.sleep(2)
+        open(app)
+        time.sleep(5)
+        find_and_click_banana()
+        close(app)
+        time.sleep(10800)
     time.sleep(2)
     open(app)
     time.sleep(5)
     find_and_click_banana()
     close(app)
-    time.sleep(10800)
-    if keyboard.is_pressed("\\"):
+    time.sleep(7200)
+    if keyboard.is_pressed("="):
         break
 print("broke out of loop. code has stopped")
     
